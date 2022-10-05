@@ -1,0 +1,39 @@
+Trong chiều nay các bạn làm bài tập này nha
++ Viết hàm thêm 1 sản phẩm (ID, NAME, PRICE) mới
+	(suggessed: void addPRoduct(int id, int name, int price)
++ Viết hàm chỉnh sửa (TêN, GIÁ, sản phẩm) 1 sản phẩm theo id
+	(suggessed: void changeProductNameById(int idProduct, int nameNew)
+	(suggessed: void changeProductPriceById(int idProduct, double priceNew)
+	(suggessed: void changeProductByID(int idProduct, Product product)
++ Viết hàm xóa 1 sản phẩm theo id và cập nhật lại file product.txt
+	(suggessed: void deleteProductByID(int idProduct)
+	(suggessed: void deleteProductByID(Product product)
+------------------
++ Viết hàm cho phép 1 bàn có thể thêm sản phẩm và số lượng vào bàn đó.
+	(suggessed: void addOrderItemToTable(int idTable, int idProduct, int amount)
+	(suggessed: void addOrderItemToTable(int idTable, int product, int amount)
++ Viết hàm cho phép 1 bàn có thể xóa sản phẩm đã đặt (idSanPham) cua ban do (idTable).
+	(suggessed: void removeOrderItemByIdTable(int idTable, int idProduct)
+	(suggessed: void removeOrderItemByIdTable(int idTable, Product product)
++ Viết hàm cho phép sửa số lượng 1 sản phẩm của 1 bàn đang order
+	(suggessed: void changeQuantityOrderByIDTable(int idTable, int idProduct, int amount)
++ Viết hàm cho phép TĂNG số lượng 1 sản phẩm của 1 bàn đang order
+	(suggessed: void incrementQuantityOrderByIDTable(int idTable, int idProduct, int quatity)
++ Viết hàm hiển thị danh sách sản phẩm theo format ĐẸP
+	(suggessed: void printProducts())
++ Viết hàm hiển thị 1 bàn có những sản phẩm nào đang được đặt theo format ĐẸP, ở phía dưới có thêm phần tổng tiền
+	(suggessed: void printTableOrderById(int idTable))
+Cấu trúc để lưu thông tin
+--------product.txt
+IdProduct,Name,price
+1,Cafe Sửa Đá,20000
+2,Cafe Đen,15000
+--------orderitem.txt
+IdOrderItem, IdProduct, amount
+1, 1, 3
+2, 2, 1
+3, 3, 5
+--------table.txt
+IdTable, Name, [IdOrderItem1, IdOrderItem2, IdOrderItem3....]
+1, Bàn 1, [1, 2]
+2, Bàn 2, [3]
