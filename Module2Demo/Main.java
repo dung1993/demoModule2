@@ -9,7 +9,9 @@ public class Main {
 
         ArrayList<Product> list = getListProducts();
         printProduct(list);
-        File file =new File("product.txt");
+
+
+
         int id = 6;
         String name= "Trà Sữa";
         double price = 30000.0;
@@ -17,15 +19,15 @@ public class Main {
         ArrayList<Product> listProduct = getListProducts();
         listProduct.add(pNew);
 
+        saveListProducts(listProduct);
     }
 
 
     private static ArrayList<Product> getListProducts() {
         ArrayList<Product> listProduct = new ArrayList<>();
-        File file = new File("\u202AD:\\demoModule2\\Module2Demo\\product.txt");
+        File file = new File("product.txt");
         try{
             FileReader fileReader = new FileReader(file);
-
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line = null;
             while((line = bufferedReader.readLine())!=null){
