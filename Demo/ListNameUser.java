@@ -10,12 +10,12 @@ public class ListNameUser {
 // ký tự đại diện cho kiểu số là d
 
     public static void main(String[] args) {
-//        Pattern pattern = Pattern.compile(REGEX_NAME);
-//        String input = "Duy123";
+        Pattern pattern = Pattern.compile(REGEX_NAME);
+        String input = "Duy123";
 //        Pattern pattern = Pattern.compile(REGEX_EMAIL);
 //        String input = "Duy123@gmail.com";
-        Pattern pattern = Pattern.compile(REGEX_NUMBER_PHONE);
-        String input = "8412345678";
+//        Pattern pattern = Pattern.compile(REGEX_NUMBER_PHONE);
+//        String input = "8412345678";
         Matcher matcher = pattern.matcher(input);
         System.out.println(matcher.matches());
     }
