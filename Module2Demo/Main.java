@@ -12,7 +12,8 @@ public class Main {
         // Viết hàm thêm 1 sản phẩm (ID, NAME, PRICE) mới:
 
 
-        addListProduct();
+        printProduct(getListProducts());
+        removeProductByIdView();
 
 
 
@@ -137,8 +138,33 @@ public class Main {
         saveListProducts(list);
     }
 
-    private void removeProductById(int id){
-        ArrayList<Product> list = getListProducts();
+    private static void removeProductById(int id){
+        ArrayList<Product> listProduct = getListProducts();
+        File file = new File("product.txt");
+        try{
+            FileReader fileReader = new FileReader("product.txt");
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            for (int i = 0; i < listProduct.size(); i++) {
+                if (listProduct.get(i).getIdProduct() == id){
+                    Product product = new Product();
+                    product.setIdProduct(listProduct.get(i).getIdProduct());
+                    product.setPrice(listProduct.get(i).getPrice());
+                    product.setName(listProduct.get(i).getName());
+                    listProduct.remove(product);
+                }
+            }
+        }catch (IOException e){
+            throw new RuntimeException(e);
+        }
+        saveListProducts(listProduct);
+
+
     }
+    public static void removeProductByIdView(){
+        System.out.println("Input Id you need remove:");
+        int id = Main.scanner.nextInt();
+        removeProductById(id);
+    }
+
 
 }
